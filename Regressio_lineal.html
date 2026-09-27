@@ -141,7 +141,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
       </div>
       <p class="note" id="txtLine"></p>
       <div class="callout">
-        <p><strong>Exemple quotidià: un taxi.</strong> La baixada de bandera costa 2,50 € i cada km costa 1,20 €. El preu és <span class="mono">y = 1,20·x + 2,50</span>, on <em>x</em> són els km. El pendent és el preu per km i l'ordenada a l'origen és el que pagues encara que no et moguis.</p>
+        <p><strong>Exemple quotidià: un taxi.</strong> La baixada de bandera costa 2,50 € i cada quilòmetre (en promig) costa 1,20 €. El preu és <span class="mono">y = 1,20·x + 2,50</span>, on <em>x</em> són els km. El pendent és el preu per km i l'ordenada a l'origen és el que pagues encara que no et moguis.</p>
       </div>
     </div>
   </div>
@@ -175,7 +175,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
     </tbody>
   </table>
   </div>
-  <p class="note" style="margin-top:12px">Pregunta per a la classe: al cas del clima, té sentit posar el consum com a x i la temperatura com a y? Què estaríem dient?</p>
+  <p class="note" style="margin-top:12px">Pregunta oberta: al cas del clima, té sentit posar el consum com a "x" i la temperatura com a "y"? Què estaríem dient?</p>
 </section>
 
 <!-- 3 -->
@@ -198,7 +198,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
       <p class="note" style="margin-top:10px">El canvi és sempre +3, que és justament el pendent <em>a</em>.</p>
     </div>
     <div class="panel">
-      <h3 style="margin-top:0">No lineal: <span class="mono">y = x²</span></h3>
+      <h3 style="margin-top:0">No lineal (funció quadràtica): <span class="mono">y = x²</span></h3>
       <div class="tablewrap"><table>
         <thead><tr><th class="num">x</th><th class="num">y</th><th class="num">canvi</th></tr></thead>
         <tbody>
@@ -209,17 +209,17 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
           <tr><td class="num">4</td><td class="num">16</td><td class="num diff var">+7</td></tr>
         </tbody>
       </table></div>
-      <p class="note" style="margin-top:10px">El canvi creix a cada pas: el gràfic és una corba, no una recta.</p>
+      <p class="note" style="margin-top:10px">El canvi creix a cada pas: el gràfic és una corba (una paràbola), no una recta.</p>
     </div>
   </div>
-  <div class="callout"><p>La regressió <strong>lineal</strong> suposa que la relació entre x i y es pot aproximar amb una recta. Si la relació real és corba, la recta farà errors grans per molt bé que l'ajustem.</p></div>
+  <div class="callout"><p>La regressió <strong>lineal</strong> suposa que la relació entre "x" i "y" es pot aproximar amb una recta. Si la relació real entre els punts té tendència a formar una corba, la recta farà errors grans per molt bé que l'ajustem.</p></div>
 </section>
 
 <!-- 4 -->
 <section id="dades">
   <h2><span class="n">04</span>Dades reals: el núvol de punts</h2>
-  <p>A la vida real els punts no cauen exactament sobre una recta. Cada pis té el seu preu per motius que no apareixen a la fórmula (reformes, vistes, negociació…). Això és el <strong>soroll</strong>.</p>
-  <p>Aquí tenim 40 pisos d'exemple (dades inventades per a la classe). Cada punt és un pis. La pregunta és: <strong>quina recta representa millor aquest núvol?</strong> Primer prova-ho a mà amb els controls rosa; després prem «Troba la millor recta».</p>
+  <p>A la vida real els punts no cauen exactament sobre una recta. Prenent l'exemple dels pisos, cada pis té el seu preu per motius que no apareixen a la fórmula (reformes fetes, vistes a segons quins llocs i lluminositat,…). Això és el que podem anomenar com <strong>soroll</strong>.</p>
+  <p>Aquí tenim 40 pisos d'exemple (dades inventades). Cada punt és un pis. La pregunta és: <strong>quina recta representa millor aquest núvol?</strong> Primer prova-ho a mà amb els controls de color rosa; després prem el botó «Troba la millor recta».</p>
 
   <div class="panel">
     <div class="seg" role="group" aria-label="Variable independent" id="segVar"></div>
@@ -373,15 +373,15 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
 
 <!-- 7 -->
 <section id="preguntes">
-  <h2><span class="n">07</span>Preguntes per comprovar què hem entès</h2>
-  <details><summary>Una recta té a = −5 i b = 100. Quant val y quan x = 4?</summary><p>y = −5·4 + 100 = 80. El pendent negatiu fa que y baixi 5 unitats per cada unitat que puja x.</p></details>
+  <h2><span class="n">07</span>Preguntes de reflexió</h2>
+  <details><summary>Una recta té a = −5 i b = 100. Quant val Y quan X = 4?</summary><p>Y = −5·4 + 100 = 80. El pendent negatiu fa que Y baixi 5 unitats per cada unitat que puja X.</p></details>
   <details><summary>Un model té MAE = 20 i RMSE = 21. Un altre té MAE = 20 i RMSE = 45. Què els diferencia?</summary><p>El segon té alguns errors molt grans (el RMSE els amplifica). El primer s'equivoca de manera més regular.</p></details>
-  <details><summary>Un model per predir notes té R² = 0,05. Què en podem dir?</summary><p>Que la variable x gairebé no ajuda a predir la nota: predir sempre la nota mitjana seria quasi igual de bo.</p></details>
+  <details><summary>Un model per predir notes té R² = 0,05. Què creieu que significa?</summary><p>Que la variable x gairebé no ajuda a predir la nota: predir sempre la nota mitjana seria quasi igual de bo.</p></details>
   <details><summary>Per què el pendent de «distància al centre» és negatiu i tot i així la variable és útil?</summary><p>El signe només indica la direcció (més distància, menys preu). La utilitat la mesura el R² i els errors, no el signe.</p></details>
   <details><summary>Si expressem tots els preus en euros en lloc de milers d'euros, canvia el R²?</summary><p>No. MAE, MSE i RMSE canvien perquè depenen de les unitats, però R² no té unitats i queda igual.</p></details>
 </section>
 
-<footer>Les dades dels pisos són fictícies, generades per a aquesta activitat: el preu depèn de la superfície, la distància i l'antiguitat més un soroll aleatori; la planta no hi influeix.</footer>
+<footer>Les dades dels pisos són fictícies, generades per a aquesta activitat: el preu depèn de la superfície, la distància i l'antiguitat més un soroll aleatori; la planta on està situat no hi influeix.</footer>
 </div>
 
 <script>
