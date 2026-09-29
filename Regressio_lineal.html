@@ -92,7 +92,16 @@ td.num,th.num{text-align:right; font-family:var(--mono); font-size:15px}
 .meter span{display:block; height:100%; border-radius:99px}
 .eqline{font-family:var(--mono); font-size:13px; word-break:break-word}
 .pill{display:inline-block; font-size:13px; font-weight:600; padding:2px 10px; border-radius:99px; border:1px solid currentColor}
-.metriccards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:18px 0}
+.metriccards{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:18px 0}
+@media (max-width:700px){ .metriccards{grid-template-columns:1fr} }
+.mathbox{background:var(--sunk); border-radius:6px; padding:10px 12px; overflow-x:auto; margin:6px 0 10px}
+math{font-family:"Cambria Math","STIX Two Math","Latin Modern Math",math; color:var(--ink); font-size:1.2em}
+.mathbox math[display="block"]{margin:0}
+.words{font-size:14px; color:var(--muted)}
+.words strong{color:var(--ink); font-weight:600}
+.symbols{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:8px 20px; margin:12px 0 4px; padding:16px 18px}
+.symbols div{display:flex; gap:12px; align-items:baseline; font-size:15px}
+.symbols math{font-size:1.25em; min-width:44px; flex:none}
 .metriccards .panel h4{margin:0; font-family:var(--mono); font-size:18px; color:var(--accent)}
 .metriccards .panel .full{font-size:14px; color:var(--muted); margin-bottom:8px}
 .metriccards .panel p{font-size:16px; margin:0 0 8px}
@@ -141,7 +150,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
       </div>
       <p class="note" id="txtLine"></p>
       <div class="callout">
-        <p><strong>Exemple quotidià: un taxi.</strong> La baixada de bandera costa 2,50 € i cada quilòmetre (en promig) costa 1,20 €. El preu és <span class="mono">y = 1,20·x + 2,50</span>, on <em>x</em> són els km. El pendent és el preu per km i l'ordenada a l'origen és el que pagues encara que no et moguis.</p>
+        <p><strong>Exemple quotidià: un taxi.</strong> La baixada de bandera costa 2,50 € i cada km costa 1,20 €. El preu és <span class="mono">y = 1,20·x + 2,50</span>, on <em>x</em> són els km. El pendent és el preu per km i l'ordenada a l'origen és el que pagues encara que no et moguis.</p>
       </div>
     </div>
   </div>
@@ -175,7 +184,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
     </tbody>
   </table>
   </div>
-  <p class="note" style="margin-top:12px">Pregunta oberta: al cas del clima, té sentit posar el consum com a "x" i la temperatura com a "y"? Què estaríem dient?</p>
+  <p class="note" style="margin-top:12px">Pregunta per a la classe: al cas del clima, té sentit posar el consum com a x i la temperatura com a y? Què estaríem dient?</p>
 </section>
 
 <!-- 3 -->
@@ -198,7 +207,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
       <p class="note" style="margin-top:10px">El canvi és sempre +3, que és justament el pendent <em>a</em>.</p>
     </div>
     <div class="panel">
-      <h3 style="margin-top:0">No lineal (funció quadràtica): <span class="mono">y = x²</span></h3>
+      <h3 style="margin-top:0">No lineal: <span class="mono">y = x²</span></h3>
       <div class="tablewrap"><table>
         <thead><tr><th class="num">x</th><th class="num">y</th><th class="num">canvi</th></tr></thead>
         <tbody>
@@ -209,17 +218,17 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
           <tr><td class="num">4</td><td class="num">16</td><td class="num diff var">+7</td></tr>
         </tbody>
       </table></div>
-      <p class="note" style="margin-top:10px">El canvi creix a cada pas: el gràfic és una corba (una paràbola), no una recta.</p>
+      <p class="note" style="margin-top:10px">El canvi creix a cada pas: el gràfic és una corba, no una recta.</p>
     </div>
   </div>
-  <div class="callout"><p>La regressió <strong>lineal</strong> suposa que la relació entre "x" i "y" es pot aproximar amb una recta. Si la relació real entre els punts té tendència a formar una corba, la recta farà errors grans per molt bé que l'ajustem.</p></div>
+  <div class="callout"><p>La regressió <strong>lineal</strong> suposa que la relació entre x i y es pot aproximar amb una recta. Si la relació real és corba, la recta farà errors grans per molt bé que l'ajustem.</p></div>
 </section>
 
 <!-- 4 -->
 <section id="dades">
   <h2><span class="n">04</span>Dades reals: el núvol de punts</h2>
-  <p>A la vida real els punts no cauen exactament sobre una recta. Prenent l'exemple dels pisos, cada pis té el seu preu per motius que no apareixen a la fórmula (reformes fetes, vistes a segons quins llocs i lluminositat,…). Això és el que podem anomenar com <strong>soroll</strong>.</p>
-  <p>Aquí tenim 40 pisos d'exemple (dades inventades). Cada punt és un pis. La pregunta és: <strong>quina recta representa millor aquest núvol?</strong> Primer prova-ho a mà amb els controls de color rosa; després prem el botó «Troba la millor recta».</p>
+  <p>A la vida real els punts no cauen exactament sobre una recta. Cada pis té el seu preu per motius que no apareixen a la fórmula (reformes, vistes, negociació…). Això és el <strong>soroll</strong>.</p>
+  <p>Aquí tenim 40 pisos d'exemple (dades inventades per a la classe). Cada punt és un pis. La pregunta és: <strong>quina recta representa millor aquest núvol?</strong> Primer prova-ho a mà amb els controls rosa; després prem «Troba la millor recta».</p>
 
   <div class="panel">
     <div class="seg" role="group" aria-label="Variable independent" id="segVar"></div>
@@ -301,28 +310,43 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
     </tbody>
   </table>
   </div>
-  <p class="note" style="margin-top:8px">RMSE = √7 ≈ 2,65. Fixa't que l'error gran del pis C (−4) pesa molt més al MSE (16) que al MAE (4).</p>
+  <p class="note" style="margin-top:8px">MAE = (2 + 1 + 4) / 3 ≈ 2,33 · MSE = (4 + 1 + 16) / 3 = 7 · RMSE = √7 ≈ 2,65. Fixa't que l'error gran del pis C (−4) pesa molt més al MSE (16) que al MAE (4).</p>
+
+  <h3>Com es llegeixen les fórmules</h3>
+  <p>Les fórmules només fan servir sumes, restes, quadrats i una arrel. Abans de mirar-les, aquests són els símbols:</p>
+  <div class="panel symbols">
+    <div><math><msub><mi>y</mi><mi>i</mi></msub></math><span>valor real del pis número <em>i</em></span></div>
+    <div><math><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></math><span>predicció de la recta per al pis <em>i</em></span></div>
+    <div><math><mi>ȳ</mi></math><span>mitjana de tots els valors reals</span></div>
+    <div><math><mi>n</mi></math><span>nombre de pisos (punts)</span></div>
+    <div><math><mo>∑</mo></math><span>«suma»: suma el que hi ha a la dreta per a tots els pisos, de <em>i</em> = 1 fins a <em>n</em></span></div>
+    <div><math><mo stretchy="false">|</mo><mi>…</mi><mo stretchy="false">|</mo></math><span>valor absolut: treu el signe (−4 passa a ser 4)</span></div>
+  </div>
 
   <div class="metriccards">
     <div class="panel">
       <h4>MAE</h4><div class="full">Mean Absolute Error · error absolut mitjà</div>
       <p>La mitjana dels errors sense signe. «De mitjana, la recta s'equivoca en tants milers d'euros.»</p>
-      <span class="formula">mitjana( |y − ŷ| )</span>
+      <div class="mathbox"><math display="block"><mrow><mtext>MAE</mtext><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">|</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math></div>
+      <div class="words"><strong>En paraules:</strong> treu el signe a cada error, suma'ls tots i divideix pel nombre de pisos.</div>
     </div>
     <div class="panel">
       <h4>MSE</h4><div class="full">Mean Squared Error · error quadràtic mitjà</div>
       <p>La mitjana dels errors al quadrat. Castiga molt els errors grans. Les unitats queden al quadrat i costa interpretar-lo.</p>
-      <span class="formula">mitjana( (y − ŷ)² )</span>
+      <div class="mathbox"><math display="block"><mrow><mtext>MSE</mtext><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></div>
+      <div class="words"><strong>En paraules:</strong> eleva cada error al quadrat, suma'ls i divideix pel nombre de pisos.</div>
     </div>
     <div class="panel">
       <h4>RMSE</h4><div class="full">Root Mean Squared Error · arrel del MSE</div>
       <p>Torna el MSE a les unitats originals. Sempre és igual o més gran que el MAE; si és molt més gran, hi ha errors grossos.</p>
-      <span class="formula">√MSE</span>
+      <div class="mathbox"><math display="block"><mrow><mtext>RMSE</mtext><mo>=</mo><msqrt><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></msqrt></mrow></math></div>
+      <div class="words"><strong>En paraules:</strong> calcula el MSE i fes-ne l'arrel quadrada: RMSE = √MSE.</div>
     </div>
     <div class="panel">
       <h4>R²</h4><div class="full">Coeficient de determinació</div>
       <p>Compara la recta amb la solució més ximple: predir sempre la mitjana. Diu quina part de la variació de y explica x.</p>
-      <span class="formula">1 − errors recta / errors mitjana</span>
+      <div class="mathbox"><math display="block"><mrow><mtext>R²</mtext><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mstyle displaystyle="true"><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mstyle><mstyle displaystyle="true"><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mi>ȳ</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mstyle></mfrac></mrow></math></div>
+      <div class="words"><strong>En paraules:</strong> a dalt, els errors al quadrat de la recta; a baix, els errors al quadrat si prediguéssim sempre la mitjana. Si la recta s'equivoca molt menys que la mitjana, la fracció és petita i R² s'acosta a 1.</div>
     </div>
   </div>
 
@@ -373,15 +397,15 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font
 
 <!-- 7 -->
 <section id="preguntes">
-  <h2><span class="n">07</span>Preguntes de reflexió</h2>
-  <details><summary>Una recta té a = −5 i b = 100. Quant val Y quan X = 4?</summary><p>Y = −5·4 + 100 = 80. El pendent negatiu fa que Y baixi 5 unitats per cada unitat que puja X.</p></details>
+  <h2><span class="n">07</span>Preguntes per comprovar què hem entès</h2>
+  <details><summary>Una recta té a = −5 i b = 100. Quant val y quan x = 4?</summary><p>y = −5·4 + 100 = 80. El pendent negatiu fa que y baixi 5 unitats per cada unitat que puja x.</p></details>
   <details><summary>Un model té MAE = 20 i RMSE = 21. Un altre té MAE = 20 i RMSE = 45. Què els diferencia?</summary><p>El segon té alguns errors molt grans (el RMSE els amplifica). El primer s'equivoca de manera més regular.</p></details>
-  <details><summary>Un model per predir notes té R² = 0,05. Què creieu que significa?</summary><p>Que la variable x gairebé no ajuda a predir la nota: predir sempre la nota mitjana seria quasi igual de bo.</p></details>
+  <details><summary>Un model per predir notes té R² = 0,05. Què en podem dir?</summary><p>Que la variable x gairebé no ajuda a predir la nota: predir sempre la nota mitjana seria quasi igual de bo.</p></details>
   <details><summary>Per què el pendent de «distància al centre» és negatiu i tot i així la variable és útil?</summary><p>El signe només indica la direcció (més distància, menys preu). La utilitat la mesura el R² i els errors, no el signe.</p></details>
   <details><summary>Si expressem tots els preus en euros en lloc de milers d'euros, canvia el R²?</summary><p>No. MAE, MSE i RMSE canvien perquè depenen de les unitats, però R² no té unitats i queda igual.</p></details>
 </section>
 
-<footer>Les dades dels pisos són fictícies, generades per a aquesta activitat: el preu depèn de la superfície, la distància i l'antiguitat més un soroll aleatori; la planta on està situat no hi influeix.</footer>
+<footer>Les dades dels pisos són fictícies, generades per a aquesta activitat: el preu depèn de la superfície, la distància i l'antiguitat més un soroll aleatori; la planta no hi influeix.</footer>
 </div>
 
 <script>
